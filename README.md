@@ -25,29 +25,25 @@ Key settings in webpack.config:
 
 - **remote** (uses port **3030**)
 
-  
-    name: `"remote_counter"`,\
-    ...\
-    exposes: {\
-        `"./Counter": "./src/components/Counter.jsx",`\
-        `"./CounterWrapper": "./src/CounterWrapper.jsx",`\
-    }
+  name: `"remote_counter"`,\
+  ...\
+  exposes: {\
+      `"./Counter": "./src/components/Counter.jsx",`\
+      `"./CounterWrapper": "./src/CounterWrapper.jsx"`\
+  }
   
 
 - **host** (uses port **8080**)
 
-  `
-    remotes: {
-      remote_counter: "remote_counter@http://localhost:3030/remoteEntry.js",
-    }
-  `
+  remotes: {\
+      `remote_counter: "remote_counter@http://localhost:3030/remoteEntry.js"`\
+  }
+  
 - **host-react** (uses port **3001**)
 
-  `
-    remotes: {
-      remote_counter: "remote_counter@http://localhost:3030/remoteEntry.js",
-    }
-  `
+  remotes: {\
+    `remote_counter: "remote_counter@http://localhost:3030/remoteEntry.js"`\
+  }
   
 
 CounterWrapper is needed to be able to use SolidJS in a React application. consumed in App.jsx in host-react.
