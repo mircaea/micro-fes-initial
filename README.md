@@ -8,8 +8,8 @@ This repo holds a project that uses 2 host apps and a remote app; all use tailwi
 
 The purpose of this repo is to demo using a a fully functional solid js micro frontend embeded into other host projects.
 
-[host](http://localhost:8080/){:target="_blank" rel="noopener"} is a solid js host consuming the [remote-counter](http://localhost:3030/){:target="_blank" rel="noopener"}.\
-[host-react](http://localhost:3001/){:target="_blank" rel="noopener"} is a react host consuming the [remote-counter](http://localhost:3030/){:target="_blank" rel="noopener"}.
+[host](http://localhost:8080/) is a solid js host consuming the [remote-counter](http://localhost:3030/).\
+[host-react](http://localhost:3001/) is a react host consuming the [remote-counter](http://localhost:3030/).
 
 ### Setup
 
@@ -26,11 +26,11 @@ Key settings in webpack.config:
 - **remote** (uses port **3030**)
 
   
-    name: "remote_counter",\
+    name: `"remote_counter"`,\
     ...\
     exposes: {\
-      "./Counter": "./src/components/Counter.jsx",\
-      "./CounterWrapper": "./src/CounterWrapper.jsx",\
+        `"./Counter": "./src/components/Counter.jsx",`\
+        `"./CounterWrapper": "./src/CounterWrapper.jsx",`\
     }
   
 
