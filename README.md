@@ -1,15 +1,15 @@
-### MicroFrontends. Module Federation
+### Microfrontends, Module Federation
 
 This repo holds a project that uses 2 host apps and a remote app; all use tailwind css.
 
-`remote` uses with SolidJS\
+`remote` uses SolidJS\
 `host` uses SolidJS\
 `host-react` uses React, `remote` & `host` use SolidJS
 
 The purpose of this repo is to demo using a a fully functional solid js micro frontend embeded into other host projects.
 
-[host](http://localhost:8080/) is a solid js host consuming the [remote-counter]().\
-[host-react](http://localhost:3001/) is a react host consuming the [remote-counter]().
+[host](http://localhost:8080/){:target="_blank" rel="noopener"} is a solid js host consuming the [remote-counter](http://localhost:3030/){:target="_blank" rel="noopener"}.\
+[host-react](http://localhost:3001/){:target="_blank" rel="noopener"} is a react host consuming the [remote-counter](http://localhost:3030/){:target="_blank" rel="noopener"}.
 
 ### Setup
 
@@ -25,14 +25,14 @@ Key settings in webpack.config:
 
 - **remote** (uses port **3030**)
 
-  `
+  
     name: "remote_counter",\
     ...\
     exposes: {\
       "./Counter": "./src/components/Counter.jsx",\
       "./CounterWrapper": "./src/CounterWrapper.jsx",\
     }
-  `
+  
 
 - **host** (uses port **8080**)
 
